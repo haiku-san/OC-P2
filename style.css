@@ -1,3 +1,63 @@
+:root {
+    --color-blue: #0065FC;
+    --color-light_blue: #DEEBFF;
+    --color-grey: #F2F2F2;
+  }
+
+
 * {
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    
+    
+
+  
+}
+
+nav li {
+    height: 100%;
+
+}
+
+nav ul a {
+    border-top: 5px solid white;
+    padding:35px 2vw;
+    height: 100%;
+
+
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 3vw;
+    height: 100px;
+    
+}
+
+#logo {
+    max-height: 50px;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul a:hover {
+    color: var(--color-blue);
+    border-top: 5px solid var(--color-blue);
 }
