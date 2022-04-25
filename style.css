@@ -27,8 +27,6 @@
     /* background-color: black; */
     margin: 0;
 
-    
-
 }
 
 #menu ul {
@@ -235,7 +233,7 @@ input[type=submit]:hover, .btn_search:hover {
     margin: 0;
     background-color: var(--color-light_blue);
     border-radius: 50px;
-    width: 63px;
+    width: 60px;
     position: relative;
     left: 30px;
     color: var(--color-blue);
@@ -288,9 +286,148 @@ input[type=submit]:hover, .btn_search:hover {
     height: 30px;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#places {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+#places_listing {
+    width: 65%;
+}
+
+#most_popular {
+    width: 35%;
+}
+
+#places_listing, #most_popular {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-grey);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+}
+
+#card_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card_content {
+    padding: 0px 10px;
+    flex-wrap: nowrap;
+    line-height: auto;
+}
+
+.place_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.125);
+}
+
+.place_card h3, .place_card p {
+    margin: 10px 0px;
+}
+
+.place_img {
+    object-fit: cover;
+    width: 100%;
+    height: 130px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+.stars i {
+    color: var(--color-blue);
+}
+
+.empty_star i {
+    color: rgb(211, 211, 211);
+}
+
+#most_popular_title_and_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#most_popular_title_and_logo h2 {
+    margin: 0px 10px 0px 0px;
+}
+
+#most_popular {
+    justify-content: flex-start;
+    align-items: space-around;
+}
+
+#most_popular .place_card {
+    flex-direction: row;
+    justify-content: flex-start;
+    white-space: normal;
+    height: 160px;
+    width: 100%;
+}
+
+#most_popular .place_card .place_img {
+    border-radius: 10px 0px 0px 10px;
+    height: 100%;
+    max-width: 30%;
+    object-fit: cover;
+
+    
+}
+
+
 /* media queries pour les tablettes */
 @media screen and (max-width: 992px) {
+    #places {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+
+    }
     
+    #places_listing, #most_popular {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    #most_popular {
+        order: 1;
+    }
+
+    #places_listing {
+        order: 2;
+        background-color: white;
+    }
+
+    .place_card {
+        width: 100%;
+    }
 }
 
 /* media queries pour les smartphones */
@@ -344,6 +481,31 @@ input[type=submit]:hover, .btn_search:hover {
 
     .btn_search {
         display: block;
+    }
+
+    #places {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    #places_listing, #most_popular {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    #most_popular {
+        order: 1;
+    }
+
+    #places_listing {
+        order: 2;
+        background-color: white;
+    }
+
+    .place_card {
+        width: 100%;
     }
 
 }
