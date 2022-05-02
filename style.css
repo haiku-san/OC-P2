@@ -320,7 +320,6 @@ main {
 .card_content {
     padding: 0px 10px;
     flex-wrap: nowrap;
-    line-height: auto;
 }
 
 .place_card {
@@ -371,7 +370,6 @@ main {
 
 #most_popular {
     justify-content: flex-start;
-    align-items: space-around;
 }
 
 #most_popular .place_card {
