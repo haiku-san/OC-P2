@@ -11,6 +11,10 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 #main_wrapper {
     display: flex;
     flex-direction: column;
@@ -320,6 +324,10 @@ main {
 .card_content {
     padding: 0px 10px;
     flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
 }
 
 .place_card {
@@ -337,6 +345,13 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.125);
+}
+
+.place_card:hover {
+    cursor: pointer;
+    color: var(--color-blue);
+    opacity: 90%;
+
 }
 
 .place_card h3, .place_card p {
@@ -376,7 +391,7 @@ main {
     flex-direction: row;
     justify-content: flex-start;
     white-space: normal;
-    height: 160px;
+    height: 190px;
     width: 100%;
     margin: 10px 0px;
 }
@@ -425,6 +440,13 @@ main {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.125);
 
 
+}
+
+.one_card_column:hover, .two_cards_column > div:hover {
+    cursor: pointer;
+    background-color: var(--color-grey);
+    color: var(--color-blue);
+    opacity: 90%;
 }
 
 #activities_cards_list > div img {
